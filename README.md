@@ -36,8 +36,6 @@ params = {'number of protein atoms': 200}
 print get_temperatures(params)
 ```
 
-This corresponds to the following web server output:
-
 ![remd temperature results](http://pix.toile-libre.org/upload/original/1428960434.png)
 
 The parameters are the ones available at http://folding.bmc.uu.se/remd/
