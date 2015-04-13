@@ -19,16 +19,24 @@ pip install git+https://github.com/mchelem/remd_temperature
 ```
 
 ## Usage
+
+Get temperatures and energies (table on the image below):
+
+```python
+from remd_temperature import get_temperatures
+params = {'number of protein atoms': 200}
+print get_temperatures_energies(params)
+```
+
+Get temperatures only (last line on the image below):
+
 ```python
 from remd_temperature import get_temperatures
 params = {'number of protein atoms': 200}
 print get_temperatures(params)
 ```
 
-
-You can retrieve a table with temperatures and energies (```get_temperatures_energies```)
-or just the temperatures (```get_temperatures```). This corresponds to the following data
-when accessing the web server directly.
+This corresponds to the following web server output:
 
 ![remd temperature results](http://pix.toile-libre.org/upload/original/1428960434.png)
 
