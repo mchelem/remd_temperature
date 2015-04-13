@@ -85,6 +85,10 @@ def load_parameters(input_params):
     :return: Parameters in the original form parameter format, filled with
         default values when the variable was in the input.
     """
+    keys = [key.lower() for key in input_params.keys()]
+    if not ('np' in keys or 'number of protein atoms' in keys):
+        raise AttributeError('You must specify the number of protein atoms')
+
     params = default_params.copy()
     if 'Np' in input_params:
         params.update(input_params)
@@ -127,7 +131,7 @@ def _read_table(table):
 
 # --- Public methods ---
 
-def get_temperatures(params=default_params):
+def get_temperatures(params):
     """
     Retrieve the temperatures (K) as a list
 
@@ -149,7 +153,7 @@ def get_temperatures(params=default_params):
     return [float(x) for x in temperatures.split(',')]
 
 
-def get_temperatures_energies(params=default_params):
+def get_temperatures_energies(params):
     """
     Get a table contaning the following parameters
 
