@@ -1,6 +1,6 @@
 # Temperature generator for REMD-simulations
 
-Python library to obtain temperatures for replica exchange molecular dynamics simulations. This library uses the Temperature generator for [REMD-simulations web server](http://folding.bmc.uu.se/remd/).
+Python library to obtain temperatures for replica exchange molecular dynamics simulations. This library queries the Temperature generator for [REMD-simulations web server](http://folding.bmc.uu.se/remd/).
 
 Temperature generator for REMD-simulations is a web server for generating temperatures for REMD-calculations. 
 You submit the number of protein atoms and water molecules in your system, and an upper and lower limit 
