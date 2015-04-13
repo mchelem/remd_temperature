@@ -38,6 +38,8 @@ print get_temperatures(params)
 
 ![remd temperature results](http://pix.toile-libre.org/upload/original/1428960434.png)
 
+See also the [examples](https://github.com/mchelem/remd_temperature/blob/master/example.py).
+
 The parameters are the ones available at http://folding.bmc.uu.se/remd/
 
 You can use either human readable names (label) or shorter and less explanatory form input names.
