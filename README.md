@@ -1,15 +1,12 @@
 # Temperature generator for REMD-simulations
 
-Python library to query the Temperature generator for REMD-simulations web server.
+Python library to obtain temperatures for replica exchange molecular dynamics simulations. This library uses the Temperature generator for [REMD-simulations web server](http://folding.bmc.uu.se/remd/).
 
-Temperature generator for REMD-simulations is a webserver for generating temperatures for REMD-calculations. 
+Temperature generator for REMD-simulations is a web server for generating temperatures for REMD-calculations. 
 You submit the number of protein atoms and water molecules in your system, and an upper and lower limit 
 for the temperature range, information about constraints and/or virtual sites and a desired exchange 
 probability Pdes, and the webserver will predict a temperature series with correspondig energy differences 
 and standard deviations which matches the desired probability Pdes. 
-You can then use these temperatures in REMD simulations.
-
-See: http://folding.bmc.uu.se/remd/
 
 Reference: Alexandra Patriksson and David van der Spoel, A temperature predictor for parallel tempering 
 simulations Phys. Chem. Chem. Phys., 10 pp. 2073-2077 (2008) http://dx.doi.org/10.1039/b716554d.
@@ -22,11 +19,20 @@ pip install git+https://github.com/mchelem/remd_temperature
 ```
 
 ## Usage
+```python
+from remd_temperature import get_temperatures()
+params = {'number of protein atoms': 200}
+print get_temperatures(params)
+```
 
-You can retrieve a list containing the temperatures or a table with temperatures or energies.
-[remd temperature results](!http://pix.toile-libre.org/?img=1428960434.png)
 
-The variable names are the ones available at http://folding.bmc.uu.se/remd/
+You can retrieve a table with temperatures and energies (```get_temperatures_energies```)
+or just the temperatures (```get_temperatures```). This corresponds to the following data
+when accessing the web server directly.
+
+![remd temperature results](http://pix.toile-libre.org/upload/original/1428960434.png)
+
+The parameters are the ones available at http://folding.bmc.uu.se/remd/
 You can both use the human readable name (label) or the shorter and less explanatory form input names.
 You **cannot mix both formats** in the same input.
 
