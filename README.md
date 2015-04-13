@@ -20,7 +20,7 @@ pip install git+https://github.com/mchelem/remd_temperature
 
 ## Usage
 ```python
-from remd_temperature import get_temperatures()
+from remd_temperature import get_temperatures
 params = {'number of protein atoms': 200}
 print get_temperatures(params)
 ```
