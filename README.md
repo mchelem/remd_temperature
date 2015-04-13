@@ -23,7 +23,7 @@ pip install git+https://github.com/mchelem/remd_temperature
 Get temperatures and energies (table on the image below):
 
 ```python
-from remd_temperature import get_temperatures
+from remd_temperature import get_temperatures_energies
 params = {'number of protein atoms': 200}
 print get_temperatures_energies(params)
 ```
