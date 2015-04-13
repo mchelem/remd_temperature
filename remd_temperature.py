@@ -73,3 +73,25 @@ def get_temperature_table(params=default_params):
     soup = BeautifulSoup.BeautifulSoup(res.text)
     table = soup.findAll('table')[1]
     return _read_table(table)
+
+
+# Print example temperatures
+if __name__ == '__main__':
+    params = default_params
+    # Set number of protein atoms
+    params['Np'] = 20
+    # Set number of water molecules
+    params['Nw'] = 10
+
+    print 'Example remd temperatures'
+    print
+
+    print 'Temperatures list'
+    print get_temperature_list(params)
+    print
+
+    print 'Temperatures and energies table'
+    print 'Temperature(K)\tμ(kJ/mol)\tσ(kJ/mol)\tμ12(kJ/mol)\t' + \
+        'σ12(kJ/mol)\tP12'
+    for line in get_temperature_table(params):
+        print '%f\t%f\t%f\t%f\t%f\t%f' % tuple(line)
