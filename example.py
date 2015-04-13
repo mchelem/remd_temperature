@@ -48,7 +48,7 @@ def example_original_params():
     Lower temperature limit: Tlow,
     Number of water molecules: Nw,
     Number of protein atoms: Np,
-    Hydrogens in protein: Hff, Values: 0 (All H), 1 (Polar H: 1),
+    Hydrogens in protein: Hff, Values: 0 (All H), 1 (Polar H),
     Simulation type: Alg,  Values: 0 (NPT), 1 (NVT),
     Tolerance: Tol,
     Upper temperature limit: Thigh,
@@ -56,14 +56,13 @@ def example_original_params():
         3 (Rigid)
     Constraints in the protein: PC, Values: 0 (Fully flexible),
         1 (Bonds to hydrogens only), 2 (All bonds)
-    Virtual sites in protein: Vs, Values: 0 (None), 1( Virtual hydrogen),
-
+    Virtual sites in protein: Vs, Values: 0 (None), 1( Virtual hydrogen)
     """
     # Use original variables interface
     params = {'Np': 20}  # Set number of protein atoms
     print '-' * 20
     print 'Example with  Np=20 (number of protein atoms)\n'
-    print 'Temperatures only\n', get_temperatures(params)
+    print 'Temperatures only\n', get_temperatures(params), '\n'
     _print_temperatures_table(get_temperatures_energies(params))
 
 
