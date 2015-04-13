@@ -39,7 +39,9 @@ print get_temperatures(params)
 ![remd temperature results](http://pix.toile-libre.org/upload/original/1428960434.png)
 
 The parameters are the ones available at http://folding.bmc.uu.se/remd/
-You can both use the human readable name (label) or the shorter and less explanatory form input names.
+
+You can use either human readable names (label) or shorter and less explanatory form input names.
+
 You **cannot mix both formats** in the same input.
 
 For example, here are two valid and equivalent ways to set contraints in water :
