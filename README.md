@@ -38,13 +38,9 @@ print get_temperatures(params)
 
 ![remd temperature results](http://pix.toile-libre.org/upload/original/1428960434.png)
 
-See also the [examples](https://github.com/mchelem/remd_temperature/blob/master/example.py).
+See also the [examples](https://github.com/mchelem/remd_temperature/blob/master/example.py), for details on how to handle the output. The parameters are the ones available at http://folding.bmc.uu.se/remd/
 
-The parameters are the ones available at http://folding.bmc.uu.se/remd/
-
-You can use either human readable names (label) or shorter and less explanatory form input names.
-
-You **cannot mix both formats** in the same input.
+You can use either human readable names (label) or shorter and less explanatory form input names. You **cannot mix both formats** in the same input.
 
 For example, here are two valid and equivalent ways to set contraints in water :
 ```python
