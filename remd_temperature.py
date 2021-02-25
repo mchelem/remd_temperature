@@ -93,7 +93,7 @@ def load_parameters(input_params):
     if 'Np' in input_params:
         params.update(input_params)
     else:
-        for key, value in input_params.iteritems():
+        for key, value in input_params.items():
             try:
                 # Remove spaces and make everything lower case
                 key = ' '.join(key.lower().split())
