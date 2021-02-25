@@ -5,6 +5,6 @@ setup(
     py_modules=['remd_temperature'],
     install_requires=[
         'requests',
-        'beautifulsoup'
+        'beautifulsoup4'
     ]
 )

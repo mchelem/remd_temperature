@@ -16,8 +16,10 @@ License: GPLv2
 """
 
 import logging
+
 import requests
-import BeautifulSoup
+from bs4 import BeautifulSoup
+
 
 
 logger = logging.getLogger(__name__)
@@ -145,11 +147,11 @@ def get_temperatures(params):
     params = load_parameters(params)
     temperatures = []
     res = requests.post(TGENERATOR_URL, data=params)
-    soup = BeautifulSoup.BeautifulSoup(res.text)
-    heading = soup.findAll(
-        lambda x: 'we also give the temperatures below' in x.text)
+    soup = BeautifulSoup(res.text, features='html5lib')
+    heading = soup.find(
+        lambda tag:tag.name=="p" and "temperatures below" in tag.text)
     # First sibling is a <br>
-    temperatures = heading[0].nextSibling.nextSibling.text
+    temperatures = heading.nextSibling.nextSibling.text
     return [float(x) for x in temperatures.split(',')]
 
 
@@ -172,6 +174,6 @@ def get_temperatures_energies(params):
     """
     params = load_parameters(params)
     res = requests.post(TGENERATOR_URL, data=params)
-    soup = BeautifulSoup.BeautifulSoup(res.text)
+    soup = BeautifulSoup(res.text, features='html5lib')
     table = soup.findAll('table')[1]
     return _read_table(table)
