@@ -29,7 +29,7 @@ Get temperatures and energies (table on the image below):
 ```python
 from remd_temperature import get_temperatures_energies
 params = {'number of protein atoms': 200}
-print get_temperatures_energies(params)
+print(get_temperatures_energies(params))
 ```
 
 Get temperatures only (last line on the image below):
@@ -37,7 +37,7 @@ Get temperatures only (last line on the image below):
 ```python
 from remd_temperature import get_temperatures
 params = {'number of protein atoms': 200}
-print get_temperatures(params)
+print(get_temperatures(params))
 ```
 
 ![remd temperature results](http://pix.toile-libre.org/upload/original/1428960434.png)
