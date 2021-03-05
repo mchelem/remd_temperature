@@ -12,8 +12,9 @@ Reference: Alexandra Patriksson and David van der Spoel, A temperature predictor
 simulations Phys. Chem. Chem. Phys., 10 pp. 2073-2077 (2008) http://dx.doi.org/10.1039/b716554d.
 
 As of 2021, the remd server is no longer online, but its source code is available at https://github.com/dspoel/remd-temperature-generator
-In order to run it, you may install php-cli (`apt install php7.4-cli`) and run `php -S localhost:8000`.
-Then, update the TGENERATOR constant at https://github.com/mchelem/remd_temperature/blob/master/remd_temperature.py#L25 to `TGENERATOR_URL = 'http://localhost:8000/tgenerator.php'`
+In order to run it, you may install php-cli (`apt install php7.4-cli`), go to its directory, and run `php -S localhost:8000`. You can then access the server on your browser going to http://localhost:8000, fill in the parameters and click submit to get the temperatures.
+
+If you prefer using the python code instead, update the TGENERATOR constant at https://github.com/mchelem/remd_temperature/blob/master/remd_temperature.py#L25 to `TGENERATOR_URL = 'http://localhost:8000/tgenerator.php'` and then run the examples below.
 
 ## Installation
 
